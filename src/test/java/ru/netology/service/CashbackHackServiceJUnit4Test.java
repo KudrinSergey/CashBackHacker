@@ -1,25 +1,25 @@
 package ru.netology.service;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
-public class CashbackHackServiceTest {
+public class CashbackHackServiceJUnit4Test {
 
     @Test
     public void testRemainLessThan1000() {
         CashbackHackService service = new CashbackHackService();
-        Assert.assertEquals(service.remain(900), 100);
+        Assert.assertEquals(100, service.remain(900));
     }
 
     @Test
     public void testRemainExactly1000() {
         CashbackHackService service = new CashbackHackService();
-        Assert.assertEquals(service.remain(1000), 1000); // Это тест, который должен упасть
+        Assert.assertEquals(1000, service.remain(1000));
     }
 
     @Test
     public void testRemainMoreThan1000() {
         CashbackHackService service = new CashbackHackService();
-        Assert.assertEquals(service.remain(1100), 900);
+        Assert.assertEquals(900, service.remain(1100));
     }
 }
