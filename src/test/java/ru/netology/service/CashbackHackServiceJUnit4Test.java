@@ -14,7 +14,7 @@ public class CashbackHackServiceJUnit4Test {
     @Test
     public void testRemainExactly1000() {
         CashbackHackService service = new CashbackHackService();
-        Assert.assertEquals(1000, service.remain(1000));
+        Assert.assertEquals(0, service.remain(1000));
     }
 
     @Test
