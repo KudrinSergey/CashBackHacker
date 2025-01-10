@@ -14,7 +14,7 @@ public class CashbackHackServiceTest {
     @Test
     public void testRemainExactly1000() {
         CashbackHackService service = new CashbackHackService();
-        Assert.assertEquals(service.remain(1000), 1000); // Это тест, который должен упасть
+        Assert.assertEquals(service.remain(1000), 0);
     }
 
     @Test
